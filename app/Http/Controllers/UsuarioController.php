@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -13,7 +14,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('lista');
     }
 
     /**
@@ -23,7 +25,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -34,7 +36,16 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Databases = $request->validate([
+            'nome' => 'required|max:255',
+            'cpf' => 'required|max:255',
+            'data' => 'required|max:255',
+            'telefone' => 'required|numeric',
+            'senha' => 'required|max:255',
+        ]);
+        $usuarios = Usuarios::create($Databases);
+
+        return redirect('/lista')->with('completed', 'Student has been saved!');
     }
 
     /**
