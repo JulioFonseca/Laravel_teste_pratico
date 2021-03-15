@@ -17,6 +17,7 @@ Consulte **Implantação** para saber como implantar o projeto.
 Banco de Dados: que está em "banco de dados/bd_sistema_crud"
     Utilizei o PhpmyAdmin e coloquei arquivo do laravel 
     na pasta htdocs do xammp para roda ele na maquina local
+    ou se preferir rode o comando migrate
 
 
 ### 🔧 Instalação
@@ -60,12 +61,12 @@ link
 localhost:8000
 ```
 
-## ⚙️ Executando os testes
+## ⚙️ Executando o codigo
 
 A pagina é bem auto-explicativa pois tem todas as 
 funcionalidades na pagina principal e não precisa ir em outra pagina
 
-### 🔩 Analise os testes de ponta a ponta
+### 🔩 Analise do codigo
 
 O codigo é bem simples com modais e rotas
 ao cadastrar um usuario os dados sao redirecionandos
