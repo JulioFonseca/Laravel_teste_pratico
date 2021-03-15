@@ -26,41 +26,61 @@ Para inicializar faça um git clone
 ```
  git clone https://github.com/JulioFonseca/Laravel_teste_pratico.git
 ```
-instale o npm na pasta
+instale o composer na sua maquina
 
 ```
-npm init
-npm install && npm run dev 
+composer install
+```
+Renomeie o arquivo .en.example
 
 ```
-
-E repita:
-
-```
-npm install && npm run dev 
+cp .env.example .env 
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+rode o comando a seguir:
+
+```
+php artisan key:generate
+```
+
+Instale o Banco de dados com o sql para ter os valores pre cadastrados
+ou apenas rode o codigo a seguir para criar a tabela no banco
+
+```
+php artisan migrate
+```
+instale na pasta xammp/htdoc ou caso queira inicialize o server
+
+```
+php artisan serve
+```
+link
+
+```
+localhost:8000
+```
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
+A pagina é bem auto-explicativa pois tem todas as 
+funcionalidades na pagina principal e não precisa ir em outra pagina
 
 ### 🔩 Analise os testes de ponta a ponta
 
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
+O codigo é bem simples com modais e rotas
+ao cadastrar um usuario os dados sao redirecionandos
+para o UsuarioController.store que por sua fez realiza o cadastro 
+no banco de dados e retorna a pagina principal o lista.blade.php.
+A function Index dentro de UsuarioController pega todos os valores da
+tabela usuarios e retona uma variavel $usuario para o lista.blade.php.
+Na pagina principal é necessario fazer um foreach para percorrer todos os
+valores do banco e imprimir na tabela de usuarios.
+No button Editar coloquei um modal com a id do usuario e os valores dentro da value
+para que quando o usuario for realizar uma ediçao continue de onde ja esta cadastrado
+ao realizar a ediçao os valores sao mandados para o UsuarioController.update que por sua 
+realiza a mudança no banco de dados e retorna para a pagina principal
+O button de de deletar abre um modal confirmando a exclusao do usuario e manda o comando de 
+deletar para UsuarioController.destroy e o mesmo faz sua rotina e exclui o valor no banco de dados. 
 
 ## 📦 Desenvolvimento
 
@@ -71,19 +91,17 @@ cadastros/ediçoes/excluçoes da tabela usuarios
 
 ### Endpoints
 
-- [x] Cadastro de usuários
-- [x] Edição de usuários
-- [x] Deletar usuários
-- [x] Ler a tabela usuários
+- ✅ Cadastro de usuários
+- ✅ Edição de usuários
+- ✅ Deletar usuários
+- ✅ Ler a tabela usuários
 
 ## 🛠️ Construído com
-
-Utilizeio:
 
 * [Laravel](https://laravel.com/docs/8.x) - O framework web usado
 
 ## ✒️ Autor
 
-* **Julio Fonseca** - *Trabalho Total* - [Julio Fonseca](https://github.com/JulioFonseca)
+* **Julio Fonseca**  - [Julio Fonseca](https://github.com/JulioFonseca)
 
 ---
