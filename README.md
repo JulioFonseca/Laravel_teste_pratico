@@ -5,12 +5,10 @@ Aplicaçao CRUD Laravel(Back-End)
 
 ## 🚀 Começando
 
-Fiz um CRUD com os requisitos que foram pedidos optei por fazer
+Fiz um CRUD com os requisitos que foram pedidos, optei por fazer
 tudo em uma pagina para assim poder acompanhar 
 a evoluçao de cadastros/exclusao/ediçao dos usuarios 
 e o tempo de esperar ser menor.
-
-Consulte **Implantação** para saber como implantar o projeto.
 
 ### 📋 Pré-requisitos
 
