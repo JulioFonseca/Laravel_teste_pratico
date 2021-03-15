@@ -27,7 +27,12 @@ Para inicializar faça um git clone
 ```
  git clone https://github.com/JulioFonseca/Laravel_teste_pratico.git
 ```
-instale o composer na sua maquina
+Instale o composer na sua maquina
+
+```
+cd Laravel_teste_pratico
+```
+Instale o composer na sua maquina
 
 ```
 composer install
@@ -38,7 +43,7 @@ Renomeie o arquivo .env.example
 cp .env.example .env 
 ```
 
-rode o comando a seguir:
+Rode o comando a seguir:
 
 ```
 php artisan key:generate
@@ -50,12 +55,12 @@ ou apenas rode o codigo a seguir para criar a tabela no banco
 ```
 php artisan migrate
 ```
-instale na pasta xammp/htdoc ou caso queira inicialize o server
+Instale na pasta xammp/htdoc ou caso queira inicialize o server
 
 ```
 php artisan serve
 ```
-link
+Link
 
 ```
 localhost:8000
