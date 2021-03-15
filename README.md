@@ -32,7 +32,7 @@ instale o composer na sua maquina
 ```
 composer install
 ```
-Renomeie o arquivo .en.example
+Renomeie o arquivo .env.example
 
 ```
 cp .env.example .env 
@@ -106,3 +106,5 @@ cadastros/ediçoes/excluçoes da tabela usuarios
 * **Julio Fonseca**  - [Julio Fonseca](https://github.com/JulioFonseca)
 
 ---
+
+⌨️ com ❤️ por [Julio Fonseca](https://github.com/JulioFonseca) 😊
