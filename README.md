@@ -22,12 +22,12 @@ Banco de Dados: que está em "banco de dados/bd_sistema_crud"
 
 ### 🔧 Instalação
 
-Para inicializar faça um git clone
+Para inicializar faça um git clone no seu Terminal
 
 ```
  git clone https://github.com/JulioFonseca/Laravel_teste_pratico.git
 ```
-Instale o composer na sua maquina
+entre no arquivo
 
 ```
 cd Laravel_teste_pratico
