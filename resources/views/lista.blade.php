@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Teste Pratico</title>
 </head>
 <body>
 
@@ -104,11 +104,39 @@
 
 
                     <td>
-                    <form action="{{ route('Usuario.destroy', $u->id)}}" method="post" style="display: inline-block">
+
+                      <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $u->id }}">
+  Deletar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal{{ $u->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $u->id }}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel{{ $u->id }}">Deletar Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Esse Usuario será deletado permanentemente, Tem certeza??</h3>
+      <form action="{{ route('Usuario.destroy', $u->id)}}" method="post" style="display: inline-block">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger btn-sm"" type="submit">Delete</button>
+                    <input type="hidden" name="id" value="{{$u->id}}">
+                    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button class="btn btn-danger" type="submit">Apagar</button>
                   </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                    
                           </td>
                   </tr>
                  @endforeach
