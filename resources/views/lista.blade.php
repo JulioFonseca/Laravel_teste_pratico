@@ -10,6 +10,46 @@
 </head>
 <body>
 
+<div class="container">
+    <!-- Button trigger modal -->
+    <br><br><br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Novo Usuario
+</button>
+
+    <h1>Lista de users</h1>
+
+    @if(count($errors)>0)
+    <div class="alert alert-success">
+        <p>{{\Session::get('success')}}</p>
+    </div>    
+   @endif
+    
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                
+
+                @foreach($usuarios as $us)
+                  <tr>
+                    <th scope="row"> <p>{{ $us->id}} </p></th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                @endforeach  
+                </tbody>
+              </table>
+  
+</div>
     
 
 <!-- Modal -->
@@ -21,7 +61,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <!-- Form -->
-        <form action="{{ route('usuario.store') }}"  method="POST">
+        <form action="{{ route('Usuario.store') }}"  method="POST">
         
                                    
                                    @csrf
@@ -57,22 +97,6 @@
 </div>
 </div>
 </div>
-    <div class="container">
-    <!-- Button trigger modal -->
-    <br><br><br>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Novo Usuario
-</button>
-
-    <h1>Lista de users</h1>
-
-    @if(count($errors)>0)
-    <div class="alert alert-success">
-        <p>{{\Session::get('success')}}</p>
-    </div>    
-   @endif
     
-  
-</div>
 </body>
 </html>

@@ -7,15 +7,19 @@ use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    private $objuser;
+    public function __construct()
+    {
+        $this->objuser=new Usuarios();
+    }
+
     public function index()
     {
-        
-        return view('lista');
+
+        $usuarios = Usuarios::all();
+
+        return view('lista', compact('usuarios'));
     }
 
     /**
@@ -45,7 +49,7 @@ class UsuarioController extends Controller
         ]);
         $usuarios = Usuarios::create($Databases);
 
-        return redirect('/lista')->with('completed', 'Student has been saved!');
+        return redirect('/')->with('completed', 'Student has been saved!');
     }
 
     /**
