@@ -1,62 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Teste Pratico
 
-## About Laravel
+Aplicaçao CRUD Laravel(Back-End)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Começando
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Fiz um CRUD com os requisitos que foram pedidos optei por fazer
+tudo em uma pagina para assim poder acompanhar 
+a evoluçao de cadastros/exclusao/ediçao dos usuarios 
+e o tempo de esperar ser menor.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Consulte **Implantação** para saber como implantar o projeto.
 
-## Learning Laravel
+### 📋 Pré-requisitos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Banco de Dados: que está em "banco de dados/bd_sistema_crud"
+    Utilizei o PhpmyAdmin e coloquei arquivo do laravel 
+    na pasta htdocs do xammp para roda ele na maquina local
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### 🔧 Instalação
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Para inicializar faça um git clone
 
-### Premium Partners
+```
+ git clone https://github.com/JulioFonseca/Laravel_teste_pratico.git
+```
+instale o npm na pasta
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+```
+npm init
+npm install && npm run dev 
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+E repita:
 
-## Code of Conduct
+```
+npm install && npm run dev 
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
-## Security Vulnerabilities
+## ⚙️ Executando os testes
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Explicar como executar os testes automatizados para este sistema.
 
-## License
+### 🔩 Analise os testes de ponta a ponta
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Explique que eles verificam esses testes e porquê.
+
+```
+Dar exemplos
+```
+
+### ⌨️ E testes de estilo de codificação
+
+Explique que eles verificam esses testes e porquê.
+
+```
+Dar exemplos
+```
+
+## 📦 Desenvolvimento
+
+Fiz um CRUD com os requisitos pedidos 
+e optei por contruir o sistema em uma pagina só
+para que assim possa acompanhar a evoluçao dos
+cadastros/ediçoes/excluçoes da tabela usuarios
+
+### Endpoints
+
+- [x] Cadastro de usuários
+- [x] Edição de usuários
+- [x] Deletar usuários
+- [x] Ler a tabela usuários
+
+## 🛠️ Construído com
+
+Utilizeio:
+
+* [Laravel](https://laravel.com/docs/8.x) - O framework web usado
+
+## ✒️ Autor
+
+* **Julio Fonseca** - *Trabalho Total* - [Julio Fonseca](https://github.com/JulioFonseca)
+
+---
