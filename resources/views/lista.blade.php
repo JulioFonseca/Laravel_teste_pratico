@@ -13,7 +13,7 @@
 <div class="container">
     <!-- Button trigger modal -->
     <br><br><br>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exaModal">
   Novo Usuario
 </button>
 
@@ -40,6 +40,76 @@
                     <td>{{$u->telefone}}</td>
                     <td>{{$u->senha}}</td>
                     <td>{{$u->data}}</td>
+
+
+                    <td>
+                    <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $u->id }}">
+                          Editar
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal{{ $u->id }}" aria-labelledby="exampleModal{{ $u->id }}Label" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModal{{ $u->id }}Label">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <!-- Form -->
+                                  <form action="{{ route('Usuario.update', $u->id) }}"  method="POST">
+                                  
+                                                            
+                                  @csrf
+                                  @method('PATCH')
+                                  <div class="modal-body">
+                                      <div class="mb-3">
+                                          <input type="hidden" id="id" name="id" value="{{$u->id}}">
+                                          <label  class="form-label">Nome</label>
+                                          <input type="text" id="nome" class="form-control" name="nome" value="{{$u->nome}}">
+                                          
+                                          
+                                          <label  class="form-label">CPF/CNPJ</label>
+                                          <input type="text" id="cpf" class="form-control" name="cpf"value="{{$u->cpf}}">
+                                          
+                                          <label for="exampleInputEmail1" class="form-label">Telefone</label>
+                                          <input type="text" id="telefone" class="form-control" name="telefone"value="{{$u->telefone}}">
+                                          
+                                          <label for="exampleInputEmail1" class="form-label">Senha</label>
+                                          <input type="text" id="senha" class="form-control" name="senha"value="{{$u->senha}}">
+                                          
+                                          <label for="exampleInputEmail1" class="form-label">Data de nascimento</label>
+                                          <input type="date" id="data" class="form-control" name="data"value="{{$u->data}}">
+                                          
+                                      </div>
+                                      
+                                  
+
+                          </div>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          <button type="submit" class="btn btn-primary">Cadastrar</button>
+                          </div></form><!-- Fim Form -->
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+
+                    
+                    
+                    
+                    
+                    
+                    </td>
+
+
+                    <td>
+                    <form action="{{ route('Usuario.destroy', $u->id)}}" method="post" style="display: inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm"" type="submit">Delete</button>
+                  </form>
+                          </td>
                   </tr>
                  @endforeach
                 </tbody>
@@ -49,11 +119,11 @@
     
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exaModal" tabindex="-1" aria-labelledby="exaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Novo Usuario</h5>
+        <h5 class="modal-title" id="exaModalLabel">Novo Usuario</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <!-- Form -->
@@ -93,6 +163,6 @@
 </div>
 </div>
 </div>
-    
+      
 </body>
 </html>

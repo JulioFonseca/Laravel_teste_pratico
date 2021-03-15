@@ -66,7 +66,12 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Usuarios::findOrFail($id);
+        return view('edit', compact('Usuarios'));
+
+        $usuarios = Usuarios::findOrFail( $id );
+        return view('lista', ['Usuarios' => $usuarios]);
+
     }
 
     /**
@@ -78,7 +83,9 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuarios = Usuarios::findOrFail( $id );
+        $usuarios->update( $request->all() );
+        return redirect('/')->with('completed', 'Student has been saved!');
     }
 
     /**
@@ -89,6 +96,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuarios = Usuarios::findOrFail( $id );
+        $usuarios->delete();
+        return redirect('/')->with('completed', 'Student has been saved!');
     }
 }
