@@ -4,22 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
+use Redirect;
 
 class UsuarioController extends Controller
 {
     
-    private $objuser;
-    public function __construct()
-    {
-        $this->objuser=new Usuarios();
-    }
 
     public function index()
     {
 
-        $usuarios = Usuarios::all();
-
-        return view('lista', compact('usuarios'));
+        $Usuarios = Usuarios::all();
+        return view('lista', ['Usuarios' => $Usuarios]);
     }
 
     /**
@@ -44,7 +39,7 @@ class UsuarioController extends Controller
             'nome' => 'required|max:255',
             'cpf' => 'required|max:255',
             'data' => 'required|max:255',
-            'telefone' => 'required|numeric',
+            'telefone' => 'required|max:255',
             'senha' => 'required|max:255',
         ]);
         $usuarios = Usuarios::create($Databases);

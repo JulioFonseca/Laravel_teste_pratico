@@ -14,9 +14,7 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
-Route::get('/', function () {
-    return view('lista');
-});
+Route::get('/', [App\Http\Controllers\UsuarioController::class, 'index']);
 
 
 Route::resource('Usuario', UsuarioController::class);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,34 +18,30 @@
 </button>
 
     <h1>Lista de users</h1>
-
-    @if(count($errors)>0)
-    <div class="alert alert-success">
-        <p>{{\Session::get('success')}}</p>
-    </div>    
-   @endif
     
         <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF/CNPJ</th>
+                    <th scope="col">telefone</th>
+                    <th scope="col">senha</th>
+                    <th scope="col">Data nascimento</th>
                   </tr>
                 </thead>
                 <tbody>
 
                 
-
-                @foreach($usuarios as $us)
+                
+                @foreach ($Usuarios as $u)
                   <tr>
-                    <th scope="row"> <p>{{ $us->id}} </p></th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row"> <p>{{$u->nome}} </p></th>
+                    <td>{{$u->cpf}}</td>
+                    <td>{{$u->telefone}}</td>
+                    <td>{{$u->senha}}</td>
+                    <td>{{$u->data}}</td>
                   </tr>
-                @endforeach  
+                 @endforeach
                 </tbody>
               </table>
   
