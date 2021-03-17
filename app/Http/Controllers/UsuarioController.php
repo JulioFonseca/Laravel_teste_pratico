@@ -44,7 +44,7 @@ class UsuarioController extends Controller
         ]);
         $usuarios = Usuarios::create($Databases);
 
-        return redirect('/')->with('completed', 'Student has been saved!');
+        return redirect('/')->with('Usuario Cadastrado');
     }
 
     /**
@@ -85,7 +85,7 @@ class UsuarioController extends Controller
     {
         $usuarios = Usuarios::findOrFail( $id );
         $usuarios->update( $request->all() );
-        return redirect('/')->with('completed', 'Student has been saved!');
+        return redirect('/')->with('Usuario Editado');
     }
 
     /**
@@ -98,6 +98,6 @@ class UsuarioController extends Controller
     {
         $usuarios = Usuarios::findOrFail( $id );
         $usuarios->delete();
-        return redirect('/')->with('completed', 'Student has been saved!');
+        return redirect('/')->with('Usuario deletado');
     }
 }
